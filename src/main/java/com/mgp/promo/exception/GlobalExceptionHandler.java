@@ -19,14 +19,4 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
                         .build());
     }
 
-    @ExceptionHandler(HttpClientErrorException.class)
-    public ResponseEntity<ErrorResponse> handleHttpClientErrorException(HttpClientErrorException exception) {
-        return ResponseEntity
-                .status(exception.getStatusCode())
-                .body(ErrorResponse.builder()
-                        .statusCode(exception.getStatusCode().value())
-                        .message(exception.getMessage())
-                        .build());
-    }
-
 }
