@@ -1,10 +1,10 @@
-package com.mgp.promo.controller;
+package com.mgp.promo.promotion;
 
-import com.mgp.promo.model.Promotion;
-import com.mgp.promo.service.PromotionService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @AllArgsConstructor
@@ -17,6 +17,11 @@ public class PromotionController {
             @RequestParam(required = true) int userId,
             @RequestParam(required = true) String promotionCode) {
         return ResponseEntity.ok(promotionService.getPromotionCode(userId, promotionCode));
+    }
+
+    @GetMapping(value = "/promotions/user/{id}")
+    public ResponseEntity<List<Promotion>> getPromotionsByUser(@PathVariable int id) {
+        return ResponseEntity.ok(promotionService.getPromotionsByUser(id));
     }
 
 }

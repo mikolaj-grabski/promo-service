@@ -1,6 +1,6 @@
 package com.mgp.promo.it
 
-import com.mgp.promo.model.Promotion
+import com.mgp.promo.promotion.Promotion
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.http.HttpStatus
 import org.springframework.test.context.jdbc.Sql

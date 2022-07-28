@@ -1,5 +1,6 @@
-package com.mgp.promo.model;
+package com.mgp.promo.promotion;
 
+import com.mgp.promo.user.User;
 import lombok.*;
 
 import javax.persistence.*;

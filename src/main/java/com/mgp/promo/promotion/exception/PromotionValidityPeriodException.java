@@ -1,5 +1,6 @@
-package com.mgp.promo.exception;
+package com.mgp.promo.promotion.exception;
 
+import com.mgp.promo.exception.BusinessException;
 import org.springframework.http.HttpStatus;
 
 public class PromotionValidityPeriodException extends BusinessException {

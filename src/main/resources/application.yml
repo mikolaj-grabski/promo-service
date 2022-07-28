@@ -8,3 +8,15 @@ spring:
   jpa:
     hibernate:
       ddl-auto: validate
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 550868887664-ip8qcgqo8291l64uqt06td1c618kaeko.apps.googleusercontent.com
+            client-secret: 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
+            scope: openid,profile,email
+      resourceserver:
+        jwt:
+          issuer-uri: https://accounts.google.com
+          jwk-set-uri: https://www.googleapis.com/oauth2/v3/certs

@@ -1,16 +1,14 @@
-package com.mgp.promo.service;
+package com.mgp.promo.promotion;
 
-import com.mgp.promo.exception.PromotionNotApplicableForUserException;
-import com.mgp.promo.exception.PromotionNotPresentException;
-import com.mgp.promo.exception.PromotionValidityPeriodException;
-import com.mgp.promo.model.Promotion;
-import com.mgp.promo.repository.PromotionRepository;
+import com.mgp.promo.promotion.exception.PromotionNotApplicableForUserException;
+import com.mgp.promo.promotion.exception.PromotionNotPresentException;
+import com.mgp.promo.promotion.exception.PromotionValidityPeriodException;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.nio.file.ProviderNotFoundException;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.util.List;
 
 @Service
 @AllArgsConstructor
@@ -44,4 +42,7 @@ public class PromotionService {
         }
     }
 
+    public List<Promotion> getPromotionsByUser(int id) {
+        return promotionRepository.findAllByUserId(id);
+    }
 }

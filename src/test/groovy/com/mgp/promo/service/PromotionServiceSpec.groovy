@@ -1,11 +1,12 @@
 package com.mgp.promo.service
 
-import com.mgp.promo.exception.PromotionNotApplicableForUserException
-import com.mgp.promo.exception.PromotionNotPresentException
-import com.mgp.promo.exception.PromotionValidityPeriodException
-import com.mgp.promo.model.Promotion
-import com.mgp.promo.model.User
-import com.mgp.promo.repository.PromotionRepository
+import com.mgp.promo.promotion.exception.PromotionNotApplicableForUserException
+import com.mgp.promo.promotion.exception.PromotionNotPresentException
+import com.mgp.promo.promotion.exception.PromotionValidityPeriodException
+import com.mgp.promo.promotion.Promotion
+import com.mgp.promo.user.User
+import com.mgp.promo.promotion.PromotionRepository
+import com.mgp.promo.promotion.PromotionService
 import spock.lang.Specification
 import spock.lang.Subject
 import spock.lang.Unroll
