@@ -3,6 +3,7 @@ package com.mgp.promo.it
 import com.mgp.promo.promotion.Promotion
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.http.HttpStatus
+import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.context.jdbc.Sql
 import org.springframework.web.client.HttpClientErrorException
 import org.springframework.web.client.RestTemplate
@@ -10,6 +11,7 @@ import spock.lang.Specification
 import spock.lang.Unroll
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+@ActiveProfiles(value = "test")
 class PromotionITSpec extends Specification {
 
     RestTemplate restTemplate = new RestTemplate();

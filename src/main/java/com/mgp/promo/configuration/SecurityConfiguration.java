@@ -2,6 +2,7 @@ package com.mgp.promo.configuration;
 
 import com.mgp.promo.user.UserSecurity;
 import lombok.AllArgsConstructor;
+import org.springframework.context.annotation.Profile;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -13,6 +14,7 @@ import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @AllArgsConstructor
+@Profile(value = {"development", "production"})
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
